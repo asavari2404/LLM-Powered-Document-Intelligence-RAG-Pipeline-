@@ -1,18 +1,18 @@
-# BigDataAssignment4part2
+#
 
-# 🧠 NVIDIA RAG Pipeline – Spring 2025
+#NVIDIA RAG Pipeline – Spring 2025
 
 Codelab: https://hishitathakkar.github.io/LLM-Powered-Document-Intelligence-RAG-Pipeline-/#0
 
 An end-to-end **Retrieval-Augmented Generation (RAG)** system that automates the ingestion, processing, and retrieval of **NVIDIA quarterly reports** using **Apache Airflow**, multiple **PDF parsers**, vector databases (**Pinecone**, **ChromaDB**), and a user-friendly **Streamlit + FastAPI interface**.
 
 ---
-## 🧠 LLM-Powered RAG Pipeline Architecture
+##  LLM-Powered RAG Pipeline Architecture
 
 ![RAG Pipeline Architecture](llm-powered_rag_pipeline.png)
 
 ---
-## 🚀 Project Summary
+## Project Summary
 
 We built an AI-powered pipeline that:
 - Ingests and parses unstructured data (PDFs)
@@ -23,7 +23,7 @@ We built an AI-powered pipeline that:
 
 ---
 
-## ⚙️ Setup Overview
+##Setup Overview
 
 1. Clone the repository and install dependencies in a virtual environment.
 2. Set up AWS credentials for S3 access.
@@ -33,9 +33,9 @@ We built an AI-powered pipeline that:
 
 ---
 
-## 🧬 Features & Components
+##  Features & Components
 
-### ✅ 1. Data Pipeline (Airflow)
+### 1. Data Pipeline (Airflow)
 - Automatically scrapes NVIDIA quarterly reports from the official website
 - Stores raw PDFs in AWS S3
 - Supports weekly or on-demand DAG runs
@@ -44,7 +44,7 @@ We built an AI-powered pipeline that:
   - Docling
   - Mistral OCR
 
-### ✅ 2. RAG System (Core Implementation)
+### 2. RAG System (Core Implementation)
 
 - **Naive RAG:** Uses manual cosine similarity with sentence-transformer embeddings.
 - **Pinecone:** Cloud-based vector database for scalable retrieval.
@@ -52,20 +52,20 @@ We built an AI-powered pipeline that:
 - **Chunking Strategies:** Includes recursive, token-based, and semantic splitting.
 - **Hybrid Search:** Supports filtering document chunks by quarter (e.g., "Q3 2023").
 
-### ✅ 3. Streamlit + FastAPI
+### 3. Streamlit + FastAPI
 
 - Frontend built with Streamlit for selecting parsers, chunkers, and retrieval methods.
 - Backend built with FastAPI to handle document processing and context generation.
 - Query responses powered by your preferred LLM (e.g., OpenAI, Claude, Gemini).
 
-### ✅ 4. Dockerized Deployment
+### 4. Dockerized Deployment
 
 - Airflow container for ingestion, scraping, and parsing
 - App container for FastAPI backend and Streamlit frontend
 
 ---
 
-## 🔧 Usage Instructions
+## Usage Instructions
 
 - Upload PDFs manually or allow Airflow to fetch them.
 - Choose your desired PDF parser, chunking method, and RAG strategy from the Streamlit UI.
@@ -74,7 +74,7 @@ We built an AI-powered pipeline that:
 
 ---
 
-## 📊 Chunking Strategies Implemented
+## Chunking Strategies Implemented
 
 - **Recursive Character Splitter** – Splits based on newlines, structure, and max length
 - **Token-Based Splitter** – Splits text by token count using OpenAI tokenizer
@@ -82,13 +82,13 @@ We built an AI-powered pipeline that:
 
 ---
 
-## 🔍 Hybrid Search
+## Hybrid Search
 
 The system supports hybrid retrieval by allowing the user to query only specific quarters. This ensures the returned context is strictly limited to relevant timeframes.
 
 ---
 
-## ✅ AI Tools Disclosure
+## AI Tools Disclosure
 
 | Tool               | Purpose                                  |
 |--------------------|-------------------------------------------|
@@ -99,7 +99,7 @@ The system supports hybrid retrieval by allowing the user to query only specific
 
 ---
 
-## 🎥 Submission Requirements
+## Submission Requirements
 
 | Deliverable               | Status |
 |---------------------------|--------|
